@@ -1,0 +1,126 @@
+.rebalance-form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  label,
+  .range-label {
+    margin-bottom: 0.4rem;
+  }
+  select,
+  [type='range'],
+  button {
+    margin-bottom: 1rem;
+  }
+  button {
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    background: black;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.25rem;
+  }
+  .range-label {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+// Range slider styling
+$track-w: 12.5em;
+$track-h: 0.5em;
+$thumb-d: 1.5em;
+$track-c: #ccc;
+$dist: $track-w - $thumb-d;
+
+@mixin track() {
+  box-sizing: border-box;
+  border: none;
+  width: $track-w;
+  height: $track-h;
+  background: $track-c;
+  border-radius: 0.25rem;
+}
+
+@mixin thumb() {
+  box-sizing: border-box;
+  border: none;
+  width: $thumb-d;
+  height: $thumb-d;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid #666;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.wrap {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: $track-w;
+  height: 3.5 * $thumb-d;
+}
+
+[type='range'] {
+  &,
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    outline: none;
+  }
+
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  min-height: $thumb-d;
+  background: transparent;
+  font: inherit;
+
+  &::-webkit-slider-runnable-track {
+    @include track();
+  }
+  &::-moz-range-track {
+    @include track;
+  }
+  &::-ms-track {
+    @include track;
+  }
+
+  &::-webkit-slider-thumb {
+    margin-top: 0.5 * ($track-h - $thumb-d);
+    @include thumb;
+  }
+  &::-moz-range-thumb {
+    @include thumb;
+  }
+  &::-ms-thumb {
+    margin-top: 0;
+    @include thumb;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
+  ~ output {
+    display: none;
+
+    .js & {
+      display: block;
+      position: absolute;
+      left: 0.5 * $thumb-d;
+      top: 0;
+      padding: 0.25em 0.5em;
+      border-radius: 3px;
+      transform: translate(
+        calc(
+          (var(--val) - var(--min)) / (var(--max) - var(--min)) *#{$dist} - 50%
+        )
+      );
+      background: #95a;
+      color: #eee;
+    }
+  }
+}
