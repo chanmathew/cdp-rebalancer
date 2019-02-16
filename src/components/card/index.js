@@ -9,7 +9,7 @@ class Card extends React.Component {
           <h3 className="half">CDP #1</h3>
           <h5 className="half">wallet address</h5>
         </div>
-        <div className="progress">progress</div>
+        <div className="progress" />
         <div className="flex space-between">
           <div className="one-fourth">
             <h6>Collateral</h6>

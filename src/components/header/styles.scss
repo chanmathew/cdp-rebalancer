@@ -1,3 +1,5 @@
+@import "../../common/colors";
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -5,7 +7,7 @@
   padding: 0.5rem 1rem;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
   grid-area: header;
-
+  background-color: $white;
   .brand {
     margin: 0;
     font-size: 1rem;
