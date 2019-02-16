@@ -1,6 +1,43 @@
+// Fonts
+$heading: "Muli", sans-serif;
+$body: "Muli", sans-serif;
+
+// Reset
+
 html,
 body {
   margin: 0;
   padding: 0;
   font-size: 16px;
+  font-family: $body;
+}
+
+// Class Presets
+
+.flex {
+  display: flex;
+}
+
+.block {
+  display: block;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+//temp
+form {
+  grid-area: form;
+}
+
+// Layout
+.App {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+    "header header"
+    "dashboard form";
+  height: 100vh;
+  grid-template-rows: 100px 1fr;
 }
