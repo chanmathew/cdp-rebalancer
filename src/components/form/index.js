@@ -16,7 +16,7 @@ class Form extends React.Component {
   };
   render() {
     return (
-      <form className='rebalance-form' action=''>
+      <form className='rebalance-form'>
         <h3>Rebalance your CDPs</h3>
         <label htmlFor='cdp-first'>From:</label>
         <select

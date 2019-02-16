@@ -1,7 +1,11 @@
 .rebalance-form {
   display: flex;
   flex-direction: column;
+  margin: 2rem;
   padding: 2rem;
+  background: #ffffff;
+  border-radius: 0.25rem;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
   label,
   .range-label {
     margin-bottom: 0.4rem;
@@ -11,13 +15,27 @@
   button {
     margin-bottom: 1rem;
   }
+  select {
+    background-color: #fff;
+    appearance: none;
+    height: 50px;
+    line-height: 1rem;
+    padding: 0 0.8rem;
+    background-image: linear-gradient(45deg, transparent 50%, gray 50%),
+      linear-gradient(135deg, gray 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(2em + 2px),
+      calc(100% - 15px) calc(2em + 2px), 1.5em;
+    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-repeat: no-repeat;
+  }
   button {
     appearance: none;
     outline: none;
     cursor: pointer;
     background: black;
     color: white;
-    padding: 0.5rem 1rem;
+    height: 3.125rem;
+    line-height: 1rem;
     font-size: 1rem;
     font-weight: 500;
     border-radius: 0.25rem;
@@ -29,10 +47,10 @@
 }
 
 // Range slider styling
-$track-w: 12.5em;
-$track-h: 0.5em;
-$thumb-d: 1.5em;
-$track-c: #ccc;
+$track-w: 12.5rem;
+$track-h: 0.65rem;
+$thumb-d: 2rem;
+$track-c: #ddd;
 $dist: $track-w - $thumb-d;
 
 @mixin track() {
@@ -41,7 +59,7 @@ $dist: $track-w - $thumb-d;
   width: $track-w;
   height: $track-h;
   background: $track-c;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
 }
 
 @mixin thumb() {
