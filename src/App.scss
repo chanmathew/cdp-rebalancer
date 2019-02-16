@@ -1,7 +1,7 @@
-@import "/common/colors";
+@import '/common/colors';
 // Fonts
-$heading: "Muli", sans-serif;
-$body: "Muli", sans-serif;
+$heading: 'Muli', sans-serif;
+$body: 'Muli', sans-serif;
 
 h1,
 h2,
@@ -36,9 +36,8 @@ body {
   justify-content: space-between;
 }
 
-//temp
-form {
-  grid-area: form;
+.sidebar {
+  grid-area: sidebar;
 }
 
 // Layout
@@ -46,8 +45,8 @@ form {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
-    "header header"
-    "dashboard form";
+    'header header'
+    'dashboard sidebar';
   height: 100vh;
   grid-template-rows: 100px 1fr;
   background-color: $lightgray;
