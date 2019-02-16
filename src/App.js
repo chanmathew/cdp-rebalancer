@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import Dashboard from './components/dashboard';
-import Header from './components/header';
-import Form from './components/form';
-import './App.scss';
+import React, { Component } from 'react'
+import Dashboard from './components/dashboard'
+import Header from './components/header'
+import Sidebar from './components/sidebar'
+import './App.scss'
 
 class App extends Component {
   render() {
@@ -10,10 +10,10 @@ class App extends Component {
       <div className='App'>
         <Header />
         <Dashboard />
-        <Form />
+        <Sidebar />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

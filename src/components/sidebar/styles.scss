@@ -6,14 +6,17 @@
   background: #ffffff;
   border-radius: 0.25rem;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+  h3 {
+    margin-bottom: 2rem;
+  }
   label,
   .range-label {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
   }
   select,
   [type='range'],
   button {
-    margin-bottom: 1rem;
+    margin-bottom: 1.75rem;
   }
   select {
     background-color: #fff;
