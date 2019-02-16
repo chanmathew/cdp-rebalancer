@@ -1,9 +1,14 @@
 import React from 'react'
+import Tabs from './../tabs'
 import './styles.scss'
 
 class Sidebar extends React.Component {
   state = {
-    rebalanceValue: 0
+    rebalanceValue: 0,
+    activeTab: ''
+  }
+  onClickTabItem = tab => {
+    this.setState({ activeTab: tab })
   }
   handleSlider = e => {
     this.setState({
@@ -17,6 +22,7 @@ class Sidebar extends React.Component {
   render() {
     return (
       <div className='sidebar'>
+        <Tabs />
         <form className='rebalance-form'>
           <h3>Rebalance your CDPs</h3>
           <label htmlFor='cdp-first'>From:</label>
