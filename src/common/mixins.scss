@@ -1,0 +1,27 @@
+@mixin progress-colors($currentProgress) {
+  $mixProgressColor: mix($success, $danger, $currentProgress);
+  $lightenProgress: 0;
+
+  @if $currentProgress > 50% {
+    $lightenProgress: (50% / $currentProgress) * 20%;
+  } @else if $currentProgress < 50% {
+    $lightenProgress: ($currentProgress / 50%) * 20%;
+  }
+  $progressColor: lighten($mixProgressColor, $lightenProgress);
+
+  background-color: $progressColor;
+}
+
+@mixin progress-preview-colors($previewProgress) {
+  $mixProgressColor: mix($success, $danger, $previewProgress);
+  $lightenProgress: 0;
+
+  @if $previewProgress > 50% {
+    $lightenProgress: (50% / $previewProgress) * 20%;
+  } @else if $previewProgress < 50% {
+    $lightenProgress: ($previewProgress / 50%) * 20%;
+  }
+  $progressColor: lighten($mixProgressColor, $lightenProgress);
+
+  background-color: $progressColor;
+}

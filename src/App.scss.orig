@@ -1,0 +1,87 @@
+<<<<<<< Updated upstream
+@import '/common/colors';
+// Fonts
+$heading: 'Muli', sans-serif;
+$body: 'Muli', sans-serif;
+=======
+@import "/common/colors";
+@import "/common/mixins";
+// Fonts
+$heading: "Muli", sans-serif;
+$body: "Muli", sans-serif;
+$small-p: 0.7rem;
+>>>>>>> Stashed changes
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1em 0;
+}
+
+// Reset
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: $body;
+  line-height: 1.2;
+}
+
+// Class Presets
+
+.flex {
+  display: flex;
+}
+
+.half {
+  width: 50%;
+}
+
+.one-fourth {
+  width: 25%;
+}
+.one-third {
+  width: percentage(1/3);
+}
+
+.block {
+  display: block;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+<<<<<<< Updated upstream
+.sidebar {
+  grid-area: sidebar;
+=======
+.text-align-right {
+  text-align: right;
+}
+
+.dotted-line {
+  border-left: 1px dotted $black;
+>>>>>>> Stashed changes
+}
+
+// Layout
+.App {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-areas:
+<<<<<<< Updated upstream
+    'header header'
+    'dashboard sidebar';
+=======
+    "header header"
+    "dashboard sidebar";
+>>>>>>> Stashed changes
+  height: 100vh;
+  grid-template-rows: 100px 1fr;
+  background-color: $lightgray;
+}

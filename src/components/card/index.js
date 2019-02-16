@@ -7,6 +7,7 @@ class Card extends React.Component {
       <div className="card block" id="card1">
         <div className="flex space-between">
           <h3 className="half">CDP #1</h3>
+          <button>Test Preview</button>
           <h5 className="half text-align-right">wallet address</h5>
         </div>
         <div className="progress-container">
