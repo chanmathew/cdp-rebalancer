@@ -1,7 +1,13 @@
+@import "../../common/colors";
+
 .cardContainer {
   width: 100%;
 
   .card {
+    background-color: $white;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
     .half {
       width: 50%;
     }
@@ -9,5 +15,29 @@
     .one-fourth {
       width: 25%;
     }
+
+    .progress {
+      background: $success;
+      border-radius: 1rem;
+      height: 1rem;
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+
+  h6 {
+    color: $gray;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+  }
+  p {
+    color: $black;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+
+  h5 {
+    color: $gray;
+    text-align: right;
   }
 }
