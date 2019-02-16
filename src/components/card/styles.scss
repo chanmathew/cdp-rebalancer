@@ -1,5 +1,6 @@
-@import "../../common/colors";
+@import "../../App";
 
+//global card container layout
 .cardContainer {
   width: 100%;
 
@@ -8,27 +9,43 @@
     padding: 2rem;
     border-radius: 0.25rem;
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
-    .half {
-      width: 50%;
-    }
 
-    .one-fourth {
-      width: 25%;
-    }
+    .progress-container {
+      .progress-labels {
+        p {
+          margin-bottom: 0;
+          font-size: $small-p;
+        }
+      }
 
-    .progress {
-      background: $success;
-      border-radius: 1rem;
-      height: 1rem;
-      width: 100%;
-      margin: 1rem 0;
+      .progress-bar {
+        background: $lightgray;
+        border-radius: 1rem;
+        height: 1rem;
+        width: 100%;
+        margin: 1rem 0;
+        position: relative;
+
+        .progress {
+          height: 1rem;
+          border-radius: 1rem;
+        }
+
+        p {
+          font-size: $small-p;
+          color: $white;
+          position: absolute;
+          top: 10%;
+          margin: 0;
+        }
+      }
     }
   }
 
   h6 {
     color: $gray;
     text-transform: uppercase;
-    font-size: 0.7rem;
+    font-size: $small-p;
   }
   p {
     color: $black;
@@ -38,6 +55,31 @@
 
   h5 {
     color: $gray;
-    text-align: right;
+  }
+}
+
+#card1 {
+  .progress {
+    $currentProgress: 80%;
+
+    @include progress-colors($currentProgress);
+
+    width: $currentProgress;
+
+    p {
+      left: $currentProgress - 4%;
+    }
+  }
+
+  .preview-progress {
+    $previewProgress: 40%;
+
+    @include progress-preview-colors($previewProgress);
+
+    width: $previewProgress;
+
+    p {
+      left: $previewProgress - 4%;
+    }
   }
 }

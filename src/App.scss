@@ -1,7 +1,9 @@
 @import "/common/colors";
+@import "/common/mixins";
 // Fonts
 $heading: "Muli", sans-serif;
 $body: "Muli", sans-serif;
+$small-p: 0.7rem;
 
 h1,
 h2,
@@ -28,6 +30,17 @@ body {
   display: flex;
 }
 
+.half {
+  width: 50%;
+}
+
+.one-fourth {
+  width: 25%;
+}
+.one-third {
+  width: percentage(1/3);
+}
+
 .block {
   display: block;
 }
@@ -36,9 +49,12 @@ body {
   justify-content: space-between;
 }
 
-//temp
-form {
-  grid-area: form;
+.text-align-right {
+  text-align: right;
+}
+
+.dotted-line {
+  border-left: 1px dotted $black;
 }
 
 // Layout
@@ -47,7 +63,7 @@ form {
   grid-template-columns: 2fr 1fr;
   grid-template-areas:
     "header header"
-    "dashboard form";
+    "dashboard sidebar";
   height: 100vh;
   grid-template-rows: 100px 1fr;
   background-color: $lightgray;

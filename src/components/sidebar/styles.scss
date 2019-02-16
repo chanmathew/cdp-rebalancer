@@ -1,5 +1,6 @@
 .sidebar {
   padding: 2rem;
+  grid-area: sidebar;
 }
 .rebalance-form {
   display: flex;
@@ -16,7 +17,7 @@
     margin-bottom: 0.6rem;
   }
   select,
-  [type='range'],
+  [type="range"],
   button {
     margin-bottom: 1.75rem;
   }
@@ -87,7 +88,7 @@ $dist: $track-w - $thumb-d;
   height: 3.5 * $thumb-d;
 }
 
-[type='range'] {
+[type="range"] {
   &,
   &::-webkit-slider-thumb {
     -webkit-appearance: none;
