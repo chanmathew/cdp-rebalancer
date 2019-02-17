@@ -26,7 +26,8 @@
         margin: 1rem 0;
         position: relative;
 
-        .progress {
+        .progress,
+        .preview-progress {
           height: 1rem;
           border-radius: 1rem;
         }
@@ -34,9 +35,9 @@
         p {
           font-size: $small-p;
           color: $white;
-          position: absolute;
-          top: 10%;
-          margin: 0;
+          // position: absolute;
+          // top: 10%;
+          padding: 2px 1%;
         }
       }
     }
@@ -64,22 +65,21 @@
 
     @include progress-colors($currentProgress);
 
-    width: $currentProgress;
-
-    p {
-      left: $currentProgress - 4%;
-    }
+    // p {
+    //   left: $currentProgress - 5%;
+    // }
   }
 
   .preview-progress {
-    $previewProgress: 40%;
+    $previewProgress: 20%;
 
     @include progress-preview-colors($previewProgress);
 
-    width: $previewProgress;
+    position: absolute;
+    top: 0;
 
     p {
-      left: $previewProgress - 4%;
+      margin: 0;
     }
   }
 }
