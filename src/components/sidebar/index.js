@@ -20,7 +20,7 @@ class Sidebar extends React.Component {
         >
           <TabList className='tab-list' selectedClassName='active'>
             <Tab className='tab-item' selectedClassName='active'>
-              Create CDPs
+              Manage CDPs
             </Tab>
             <Tab className='tab-item' selectedClassName='active'>
               Rebalance CDPs

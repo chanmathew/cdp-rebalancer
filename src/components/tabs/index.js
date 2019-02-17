@@ -28,7 +28,7 @@ class Tabs extends React.Component {
           data-id='create'
           onClick={this.handleTabSelect}
         >
-          Create CDPs
+          Manage CDPs
         </div>
         <div
           className={this.className}
