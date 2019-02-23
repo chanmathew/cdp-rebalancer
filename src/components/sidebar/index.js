@@ -31,7 +31,7 @@ class Sidebar extends React.Component {
             <CreateForm />
           </TabPanel>
           <TabPanel>
-            <RebalanceForm />
+            <RebalanceForm ></RebalanceForm>
           </TabPanel>
         </Tabs>
       </div>

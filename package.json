@@ -12,9 +12,14 @@
     "react-redux": "^6.0.0",
     "react-scripts": "2.1.5",
     "react-tabs": "^3.0.0",
+<<<<<<< HEAD
     "redux": "^4.0.1",
     "redux-form": "^8.1.0",
     "redux-thunk": "^2.3.0"
+=======
+    "pubsub-js": "1.7.0"
+
+>>>>>>> form-fixes2
   },
   "scripts": {
     "start": "react-scripts start",
