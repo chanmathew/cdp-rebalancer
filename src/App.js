@@ -5,6 +5,9 @@ import Sidebar from './components/sidebar'
 import './App.scss'
 
 class App extends Component {
+  constructor(props){
+      super(props);
+  }
   render() {
     return (
       <div className='App'>
